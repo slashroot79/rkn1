@@ -12,7 +12,7 @@ app.get('/t1',(req,res)=>{
 })
 
 app.get('/t2',(req,res)=>{
-    res.send("another one...")
+    res.send("another endpoint...")
 })
 
 app.listen(PORT, ()=>{console.log(`Started server....listening on port : ${PORT}`)})
