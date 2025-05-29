@@ -11,7 +11,8 @@ on:
 
 jobs:
   build:
-    runs-on: 'ubuntu-latest'
+    runs-on: [self-hosted, rkn1-runner]
+
 
     steps:
     - uses: actions/checkout@v2
