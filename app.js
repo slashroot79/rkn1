@@ -7,9 +7,12 @@ app.get('/',(req,res)=>{
     res.send("version test")
 })
 
-app.get('/t',(req,res)=>{
+app.get('/t1',(req,res)=>{
     res.send("version test endpoint...")
 })
 
+app.get('/t2',(req,res)=>{
+    res.send("another one...")
+})
 
 app.listen(PORT, ()=>{console.log(`Started server....listening on port : ${PORT}`)})
