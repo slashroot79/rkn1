@@ -1,0 +1,22 @@
+name: ACA Runner Test
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [self-hosted, linux, aca]
+    steps:
+      - name: Hello from ACA runner
+        run: |
+          echo "Running on an event-driven ACA runner"
+          echo "Hostname: $(hostname)"
+          echo "Triggered by: ${{ github.event_name }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Commit: ${{ github.sha }}"
+      - name: Simulate work
+        run: |
+          echo "Working..."
+          sleep 5
+          echo "Done"
